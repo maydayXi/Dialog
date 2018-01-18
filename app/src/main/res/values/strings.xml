@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Dialog1</string>
+    <string name="btn_1">Just Dialog</string>
+    <string name="btn_2">Yes, Maybe and No</string>
+    <string name="btn_3">Items</string>
+    <string name="btn_4">Single Choice</string>
+    <string name="btn_5">Multiple Choice</string>
+    <string name="btn_6">Custom Layout</string>
+    <string name="username_hint">Username</string>
+    <string name="password">Password</string>
+</resources>
