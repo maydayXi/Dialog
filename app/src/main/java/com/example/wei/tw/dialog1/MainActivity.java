@@ -5,9 +5,11 @@ import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.app.TimePickerDialog;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -71,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
                 android.R.style.Theme_Material_Light_Dialog_Alert
         );
         // 設定標題
-        d.setTitle("Demo");
+        d.setTitle(R.string.dialog_1_title_text);
         // 設定訊息
-        d.setMessage("Dialog1 Activity");
+        d.setMessage(R.string.dialog_1_message_text);
         // 顯示對話框
         d.show();
     }
@@ -248,7 +250,8 @@ public class MainActivity extends AppCompatActivity {
                 android.R.style.Theme_Material_Light_Dialog_Alert);
 
         // 設定對話框使用的畫面配置資源與標題
-        d.setView(dialogView).setTitle("Sign in");
+        d.setView(dialogView).setTitle(
+                R.string.dialog_6_title_text);
 
         // 加入登入按鈕
         d.setPositiveButton("Sign in",
@@ -263,9 +266,46 @@ public class MainActivity extends AppCompatActivity {
                                 dialogView.findViewById(R.id.userName);
                         EditText password =
                                 dialogView.findViewById(R.id.password);
-                        btn6.setText(username.getText()
-                                + "：" +
-                                password.getText());
+
+                        String usernameValue = username.getText().toString();
+                        String passwordValue = password.getText().toString();
+
+                        String simonUsername = getString(R.string.simon_username);
+                        String simonPassword = getString(R.string.simon_password);
+
+                        // 取得 Resources 物件
+                        Resources r = getResources();
+
+                        if (!(usernameValue.equals(simonUsername) &&
+                                (passwordValue.equals(simonPassword)))) {
+
+                            // 讀取顏色資源
+                            int color = ContextCompat.getColor(
+                                    MainActivity.this,
+                                    R.color.failure_text_color
+                            );
+                            btn6.setTextColor(color);
+
+                            // 讀取尺寸資源
+                            float dimen = r.getDimension(R.dimen.failure_text_size);
+                            btn6.setTextSize(dimen);
+
+                            btn6.setText(R.string.sign_in_failure);
+                        } else {
+
+                            // 讀取顏色資源
+                            int color = ContextCompat.getColor(
+                                    MainActivity.this,
+                                    R.color.btn_text_color
+                            );
+                            btn6.setTextColor(color);
+
+                            // 讀取尺寸資源
+                            float dimen = r.getDimension(R.dimen.btn_text_size);
+                            btn6.setTextSize(dimen);
+
+                            btn6.setText(R.string.sign_in_success);
+                        }
                     }
                 });
 
