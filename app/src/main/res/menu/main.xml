@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main_menu_add"
+        android:title="@string/menu_add_txt"
+        android:icon="@android:drawable/ic_menu_add"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/main_menu_delete"
+        android:title="@string/menu_delete_txt"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/main_menu_help"
+        android:title="@string/menu_help_txt"
+        android:icon="@android:drawable/ic_menu_help"
+        app:showAsAction="always"/>
+
+    <item
+        android:title="@string/menu_more_txt"
+        android:icon="@android:drawable/ic_menu_more"
+        app:showAsAction="always">
+
+        <!-- 第二層選單 -->
+
+        <menu>
+            <item
+                android:id="@+id/menu_camera"
+                android:icon="@android:drawable/ic_menu_camera"
+                android:title="@string/menu_camera_txt"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/menu_compass"
+                android:icon="@android:drawable/ic_menu_compass"
+                android:title="@string/menu_compass_txt"
+                app:showAsAction="always" />
+            <item
+                android:id="@+id/menu_upload"
+                android:icon="@android:drawable/ic_menu_upload"
+                android:title="@string/menu_upload_txt"
+                app:showAsAction="always" />
+
+        </menu>
+
+    </item>
+</menu>

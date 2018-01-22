@@ -22,4 +22,12 @@
     <string name="simon_password">iamsimon</string>
     <string name="sign_in_failure">Failure!</string>
     <string name="sign_in_success">Success!</string>
+
+    <string name="menu_add_txt">Add</string>
+    <string name="menu_delete_txt">Delete</string>
+    <string name="menu_help_txt">Help</string>
+    <string name="menu_more_txt">More</string>
+    <string name="menu_camera_txt">Camera</string>
+    <string name="menu_compass_txt">Compass</string>
+    <string name="menu_upload_txt">Upload</string>
 </resources>

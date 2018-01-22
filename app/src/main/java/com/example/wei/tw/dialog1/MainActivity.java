@@ -13,6 +13,9 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -63,6 +66,39 @@ public class MainActivity extends AppCompatActivity {
         day = calendar.get(Calendar.DAY_OF_MONTH);
         hour = calendar.get(Calendar.HOUR);
         minute = calendar.get(Calendar.MINUTE);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // 取得載入選單用的 MenuInflater 物件
+        MenuInflater menuInflater = getMenuInflater();
+
+        // 呼叫 inflate 方法戴入指定的選單資源
+        // 第二個參數是這個方法的 Menu 物件
+        menuInflater.inflate(R.menu.main, menu);
+
+        // 回傳 true 才會顯示
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        // 取得選單項目的資源編號
+        int id = item.getItemId();
+
+        switch (id) {
+            case R.id.main_menu_add:
+                break;
+
+            case R.id.main_menu_delete:
+                break;
+
+            case R.id.main_menu_help:
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void btnOneClick(View view) {
