@@ -8,4 +8,18 @@
     <string name="btn_6">Custom Layout</string>
     <string name="username_hint">Username</string>
     <string name="password">Password</string>
+    <string name="btn_7">Date Picker Dialog</string>
+    <string name="btn_8">Time Picker Dialog</string>
+    <string name="btn_9">Progress Dialog</string>
+    <string name="btn_10">Progress Dialog Horizontal</string>
+
+    <string name="dialog_1_title_text">Demo</string>
+    <string name="dialog_1_message_text">Dialog1 Activity</string>
+
+    <string name="dialog_6_title_text">Sign in</string>
+
+    <string name="simon_username">simon@gmail.com</string>
+    <string name="simon_password">iamsimon</string>
+    <string name="sign_in_failure">Failure!</string>
+    <string name="sign_in_success">Success!</string>
 </resources>
